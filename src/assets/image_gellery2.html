@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Designs</title>
+    <link rel="icon" href="/storage/emulated/0/Pictures/LogoMakerCa-1719154228902 (1) (1).png" >
+    </head>
+    <style>
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+body {
+    background-color: white;
+    padding: 5rem 7.5rem;
+    color: #153618;
+}
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+h2 {
+    colour: #153618;
+    font-size: 3.0625rem;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+h3 {
+    font-size: 2.1075rem;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+header p {
+    font-size: 1.125rem;
+}
+p.small {
+    color: red;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    /* text-transform: uppercase */
+}
+figure,
+figure p.small {
+    color: #fff;
+}
+figure h3 + p {
+    font-size: 0.8125rem;
+}
+figure footer p.small {
+    font-weight:400;
+    margin-bottom: 0;
+}
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+header {
+    margin-bottom: 7.5rem;
+    max-height: 75%;
+}
+.gallery {
+    display: grid;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    grid-auto-rows: 40rem;
+    grid-auto-flow: dense;
+}
+figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+figcaption {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2rem;
+    color: white;
+}
+figcaption main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+figure p {
+    margin: 0;
+}
+figure footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+figure footer h4 {
+    width: auto;
+    background-color: red;
+    cursor: pointer;
+    border-style: transparent;
+    border-radius: 50%;
+    padding: 12px;
+}
+figure main,
+figure footer {
+    opacity: 0;
+}
+/* figure:hover figcaption {
+    background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 100%);
+} */
+figure:hover main,
+figure:hover footer {
+    opacity: 1;
+}
+figcaption {
+    z-index: 1;
+}
+figcaption::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 100%);
+    z-index: -1;
+    opacity: 0;
+    transition-property: opacity;
+}
+figure:hover figcaption::before {
+    opacity: 1;
+}
+figure a img {
+    transform: scale(1.2);
+    transition-property: transform;
+}
+figure {
+    overflow: hidden;
+}
+figure:hover a img {
+    transform: scale(1);
+}
+figure main {
+    transform: translate3d(0, -6rem, 0);
+    transition-property: opacity, transform;
+}
+figure footer {
+    transform: translate3d(0, 6rem, 0);
+    transition-property: opacity, transform;
+}
+figure footer h4 {
+    transform: translate3d(-3rem ,0, 0) rotate(360deg);
+    transition-delay: 1s;
+    opacity: 0;
+}
+
+figure:hover footer h4 {
+    transform: translate3d(0, 0, 0) rotate(0);
+    opacity: 1;
+}
+figure:hover main,
+figure:hover footer {
+    transform:translate3d(0, 0, 0);
+}
+figcaption::before,
+figure img,
+figure main,
+figure footer {
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+/* CSS ANIMATIONS */
+.loader-container {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: #0c0603;
+    display: grid;
+    place-content: center;
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+.loader {
+    width: 4rem;
+    height: 4rem;
+    border: .4rem solid #f27541;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: .8s ease infinite alternate spinner;
+}
+@keyframes spinner {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(1turn) scale(1.2);
+    }
+}
+.loader-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+#page-content {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+    transition: opacity .6s ease-in-out, transform .6s ease-in-out;
+}
+#page-content.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+    </style>
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <section id="page-content">
+        <header>
+            <p class="small">TAKE A TRIP</p>
+            <h2>Destinations Unveiled: Inspiring Journeys Await</h2>
+            <p>Embark on a virtual adventure to stunning destinations worldwide, where breathtaking landscapes, vibrant cultures, and ungorgetable experience awaits.</p>
+        </header>
+        <ul class="gallery">
+            <li>
+                <figure>
+                    <a href="#"><img src="http://localhost:8080/Designs/beach.img" alt="Great Barrier Reef, Austrlaia"</a>
+                    <figcaption>
+                        <main>
+                            <p class="small">9-DAY TRIP</p>
+                            <h3>Great Barrier Reef, <em>Australia</em></h3>
+                            <p>Stand in awe at the colossal beauty of the Grand Canyon, carved by the forces of nature over hundreds of years.</p>
+                        </main>
+                        
+                        <footer>
+                            <div>
+                                <p class="small">From</p>
+                                <p class="small">€1,200</p>
+                            </div>
+                            
+                            <h4>></h4>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="#"><img src="http://localhost:8080/Designs/mountain2.img" alt="Great Canyon, United States"</a>
+                    <figcaption>
+                        <main>
+                            <p class="small">9-DAY TRIP</p>
+                            <h3>Great Canyon, <em>United States</em></h3>
+                            <p>Stand in awe at the colossal beauty of the Grand Canyon, carved by the forces of nature over hundreds of years.</p>
+                        </main>
+                        
+                        <footer>
+                            <div>
+                                <p class="small">From</p>
+                                <p class="small">€1,200</p>
+                            </div>
+                            
+                            <h4>></h4>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="#"><img src="http://localhost:8080/Designs/mountain.img" alt="Great Canyon, United States"</a>
+                    <figcaption>
+                        <main>
+                            <p class="small">9-DAY TRIP</p>
+                            <h3>Great Canyon, <em>United States</em></h3>
+                            <p>Stand in awe at the colossal beauty of the Grand Canyon, carved by the forces of nature over hundreds of years.</p>
+                        </main>
+                        
+                        <footer>
+                            <div>
+                                <p class="small">From</p>
+                                <p class="small">€1,200</p>
+                            </div>
+                            
+                            <h4>></h4>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="#"><img src="http://localhost:8080/Designs/beach2.img" alt="Great Canyon, United States"</a>
+                    <figcaption>
+                        <main>
+                            <p class="small">9-DAY TRIP</p>
+                            <h3>Great Canyon, <em>United States</em></h3>
+                            <p>Stand in awe at the colossal beauty of the Grand Canyon, carved by the forces of nature over hundreds of years.</p>
+                        </main>
+                        
+                        <footer>
+                            <div>
+                                <p class="small">From</p>
+                                <p class="small">€1,200</p>
+                            </div>
+                            
+                            <h4>></h4>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+    <script>
+        const loaderContainer = document.querySelector('.loader-container')
+        const pageContent = document.querySelector('#page-content')
+        
+        window.addEventListener('load', () => {
+            loaderContainer.classList.add('hidden')
+            pageContent.classList.add('visible')
+        })
+    </script>
+</body>    
+</html>

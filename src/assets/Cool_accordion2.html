@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Designs</title>
+    <link rel="icon" href="/storage/emulated/0/Pictures/LogoMakerCa-1719154228902 (1) (1).png" >
+</head>
+<style>
+:root {
+    --def-transition-duration: .2s;
+    
+    --color-cloudy: #26323E;
+    --color-cloudy-shade: #222d38;
+    
+    --color-sunny: #26323E;
+    --color-sunny-shade: #396ea9;
+    
+    --color-rainy: #26323E;
+    --color-rainy-shade: #222d38;
+    
+    --color-thunderstorms: #26323E;
+    --color-thunderstorms-shade: #36708c;
+}
+html {
+    font-size: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 120%;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+}
+#hero {
+    background: linear-gradient(to bottom, #151618 64%, white 36%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+#hero ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem  5rem;
+}
+#main-header ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+#main-header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6125rem;<!--  -->
+}
+#page-title {
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+#page-title p {
+    font-size: 1.5825rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.48);
+}
+#page-title h1 {
+    font-size: 3.6625rem;
+    font-weight: 700;
+}
+#hero .accordion {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.accordion--item p {
+    margin: 0;
+}
+.cloudy {
+    background: var(--color-cloudy) url(http://localhost:8080/Designs/cloudy.img);
+}
+.cloudy .readings li {
+    background-color: var(--color-cloudy-shade);
+}
+.sunny {
+    background: var(--color-sunny) url(http://localhost:8080/Designs/sunny.img);
+}
+.sunny .readings li {
+    background-color: var(--color-sunny-shade);
+}
+.rainy {
+    background: var(--color-rainy) url(http://localhost:8080/Designs/rainy.img);
+}
+.rainy .readings li {
+    background-color: var(--color-rainy-shade);
+}
+.thunderstorms {
+    background: var(--color-thunderstorms) url(http://localhost:8080/Designs/storm.img);
+}
+.thunderstorms .readings li {
+    background-color: var(--color-thunderstorms-shade);
+}
+.accordion--item {
+    background-releat: no-repeat;
+    background-position: center center;
+    background-size: 200%;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30rem;
+    flex: 0 0 10rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+/* missing */
+.date li:nth-child(2) {
+    font-size: 0.8125rem;
+}
+.temp {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+}
+.temp p {
+    font-size: 2.1875rem;
+    font-weight: 200;
+    margin-bottom: .5rem;
+}
+.temp--values {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    font-size: 1.125rem;
+    font-weight; 700;
+}
+.temp--values li:nth-child(1) {
+    color: white;
+}
+.temp--values li:nth-child(2) {
+    color: rgba(255, 255, 255, 0.48);
+}
+.temp .temp--values li:nth-child(1) {
+    font-size: 2.1815rem;
+}
+.temp .temp--values li:nth-child(2) {
+    font-size: 1.5625rem;
+}
+.readings {
+    display: flex;
+    gap: 1rem;
+    width: 32rem;
+    opacity: 0;
+}
+.readings li img {
+    width: 30px;
+    height: 30px;
+}
+.readings li {
+    border-radius: .75rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    text-align: center;
+}
+.readings {
+    color: white;
+}
+.readings li p:nth-of-type(2) {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.48);
+}
+.bottom-temp {
+    position: absolute;
+    bottom: 2rem;
+}
+.opened {
+    background-size: 32rem;
+    flex-basis: 32rem;
+    cursor: auto;
+}
+.opened .date li:nth-child(2) {
+    color: rgba(255, 255, 255, 0.48);
+}
+.opened .temp,
+.opened .readings {
+    opacity: 1;
+}
+.opened .bottom-temp {
+    opacity: 0;
+}
+/* TRANSITIONS AND */
+.accordion--item {
+    transition-property: flex-basis, background-size, padding;
+}
+.accordion--item:hover:not(.opened) {
+    background-size: 32rem;
+    padding-block/* padding bottom and top */: 3rem;
+}
+.accordion--item:hover:not(.opened) .bottom-temp {
+    transform: translate3d(0, -1rem, 0);
+}
+.bottom-temp {
+    transition-property: transform, opacity;
+}
+.opened .bottom-temp {
+    transform: translate3d(0, 2rem, 0);
+}
+.temp {
+    transition: opacity, transform;
+}
+.temp {
+    transform: translate3d(0, -4rem, 0);
+}
+.readings {
+    transform: translate3d(0, 4rem, 0);
+}
+.opened .temp,
+.opened .readings {
+    transform: translate3d(0, 0, 0);
+}
+.date li:nth-child(2) {
+    transition-property: color;
+}
+.accordion--item,
+bottom-temp,
+.temp,
+.readings,
+.date li:nth-child(2) {
+    transition-duration: .2s;
+    timing-funcion: ease-in-out;
+}
+</style>
+<body>
+    <div id="hero">
+        <header id="main-header">
+            <a href="#">Giftweb.com</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">Travel Styles</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="page-title">
+            <p>Explore Weather Forecasts</p>
+            <h1>New York City</h1>
+        </div>
+        
+        <ul class="accordion">
+            <li class="accordion--item cloudy opened">
+                <ul class="date">
+                    <li>Tue</li>
+                    <li>12 Apr</li>
+                </ul>
+                <div class="temp">
+                    <p>Cloudy</p>
+                    <ul class="temp--values">
+                        <li>24°</li>
+                        <li>16°</li>
+                    </ul>
+                </div>
+                <ul class="readings">
+                    <li>
+                        <img src="http://localhost:8080/Designs/wind_icon.img" alt="Wind">
+                        <p>23 km/h</p>
+                        <p>Wind</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/humidity_icon.img" alt="Humidity">
+                        <p>29%</p>
+                        <p>Humidity</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/rain_icon.img" alt="Rain">
+                        <p>8%</p>
+                        <p>Rain</p>
+                    </li>
+                </ul>
+                <ul class="bottom-temp temp--values">
+                    <li>24°</li>
+                    <li>16°</li>
+                </ul>
+            </li>
+            <li class="accordion--item sunny">
+                <ul class="date">
+                    <li>Wed</li>
+                    <li>13 Apr</li>
+                </ul>
+                <div class="temp">
+                    <p>Sunny</p>
+                    <ul class="temp--values">
+                        <li>25°</li>
+                        <li>23°</li>
+                    </ul>
+                </div>
+                <ul class="readings">
+                    <li>
+                        <img src="http://localhost:8080/Designs/wind_icon.img" alt="Wind">
+                        <p>13 km/h</p>
+                        <p>Wind</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/humidity_icon.img" alt="Humidity">
+                        <p>25%</p>
+                        <p>Humidity</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/rain_icon.img" alt="Rain">
+                        <p>2%</p>
+                        <p>Rain</p>
+                    </li>
+                </ul>
+                <ul class="bottom-temp temp--values">
+                    <li>25°</li>
+                    <li>13°</li>
+                </ul>
+            </li>
+            <li class="accordion--item rainy">
+                <ul class="date">
+                    <li>Thur</li>
+                    <li>14 Apr</li>
+                </ul>
+                <div class="temp">
+                    <p>Rainy</p>
+                    <ul class="temp--values">
+                        <li>19°</li>
+                        <li>11°</li>
+                    </ul>
+                </div>
+                <ul class="readings">
+                    <li>
+                        <img src="http://localhost:8080/Designs/wind_icon.img" alt="Wind">
+                        <p>7 km/h</p>
+                        <p>Wind</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/humidity_icon.img" alt="Humidity">
+                        <p>56%</p>
+                        <p>Humidity</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/rain_icon.img" alt="Rain">
+                        <p>67%</p>
+                        <p>Rain</p>
+                    </li>
+                </ul>
+                <ul class="bottom-temp temp--values">
+                    <li>19°</li>
+                    <li>11°</li>
+                </ul>
+            </li>
+            <li class="accordion--item thunderstorms">
+                <ul class="date">
+                    <li>Fri</li>
+                    <li>15 Apr</li>
+                </ul>
+                <div class="temp">
+                    <p>Thunderstorms</p>
+                    <ul class="temp--values">
+                        <li>23°</li>
+                        <li>12°</li>
+                    </ul>
+                </div>
+                <ul class="readings">
+                    <li>
+                        <img src="http://localhost:8080/Designs/wind_icon.img" alt="Wind">
+                        <p>34 km/h</p>
+                        <p>Wind</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/humidity_icon.img" alt="Humidity">
+                        <p>49%</p>
+                        <p>Humidity</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/rain_icon.img" alt="Rain">
+                        <p>22%</p>
+                        <p>Rain</p>
+                    </li>
+                </ul>
+                <ul class="bottom-temp temp--values">
+                    <li>23°</li>
+                    <li>12°</li>
+                </ul>
+            </li>
+            <li class="accordion--item sunny">
+                <ul class="date">
+                    <li>Sat</li>
+                    <li>16 Apr</li>
+                </ul>
+                <div class="temp">
+                    <p>Sunny</p>
+                    <ul class="temp--values">
+                        <li>29°</li>
+                        <li>20°</li>
+                    </ul>
+                </div>
+                <ul class="readings">
+                    <li>
+                        <img src="http://localhost:8080/Designs/wind_icon.img" alt="Wind">
+                        <p>10 km/h</p>
+                        <p>Wind</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/humidity_icon.img" alt="Humidity">
+                        <p>21%</p>
+                        <p>Humidity</p>
+                    </li>
+                    <li>
+                        <img src="http://localhost:8080/Designs/rain_icon.img" alt="Rain">
+                        <p>0%</p>
+                        <p>Rainy</p>
+                    </li>
+                </ul>
+                <ul class="bottom-temp temp--values">
+                    <li>29°</li>
+                    <li>20°</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--<button onclick="window.print()">Print</button>-->
+    
+    <script>
+        let accordionsItems = document.querySelectorAll('.accordion li')
+        
+        accordionsItems.forEach(item => {
+            item.addEventListener('click', () => {
+                accordionsItems.forEach(item => {
+                    item.classList.remove('opened')
+                })
+                
+                item.classList.add('opened')
+            })
+        })
+    </script>
+</body>
+</html>
