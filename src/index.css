@@ -71,7 +71,7 @@
   @reference "tailwindcss/utilities";
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general font-semibold uppercase text-white 
+    @apply relative font-general font-semibold uppercase text-white 
            after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full 
            after:origin-bottom-right after:scale-x-0 after:bg-white 
            after:transition-transform after:duration-300 
