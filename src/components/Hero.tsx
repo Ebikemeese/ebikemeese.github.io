@@ -20,7 +20,7 @@ const Hero = () => {
                     <div className="author xl:left-7 lg:left-6 md:left-7 left-[50%]">
                         <h2>Ebikeme Ese</h2>
                         <p>
-                            <b>Full-Stack Developer</b>
+                            <b>Full-Stack Developer Based in Nigeria</b>
                         </p>
 
                         <p>
@@ -29,13 +29,7 @@ const Hero = () => {
                     </div>
 
                     <div className="model">
-                        {/* <img 
-                            src="/src/assets/images/full-copy.png" 
-                            alt="Profile picture" 
-                            // width={100}
-                            // height={75}
-                            className='left-[29.8%] scale-118 bottom-0 absolute'
-                        /> */}
+                        
                     </div>
                 </div>
             </div>

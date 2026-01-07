@@ -33,7 +33,7 @@ svg text {
 }
 svg text.text-body {
   stroke: var(--loader-text-color);
-  animation: 4s infinite alternate animate-stroke;
+  animation: 3s infinite alternate animate-stroke;
 }
 svg text.dot {
   fill: var(--loader-dot-color);

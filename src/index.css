@@ -55,16 +55,25 @@
 
 @theme {
   --color-zinc-350: #b8b8c4;
+  --color-tertiary: #151030;
 
   --font-generalsans: 'General Sans', sans-serif;
 
   --font-general: "general", sans-serif;
+
+  --shadow-card: 0px 35px 120px -15px #211e35;
 }
 
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
 @layer utilities {
