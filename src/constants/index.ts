@@ -1,4 +1,4 @@
-import type { Service, NavLink } from "./index.d"
+import type { Service, NavLink, Experience } from "./index.d"
 
 
 export const navLinks: NavLink[] = [
@@ -8,7 +8,7 @@ export const navLinks: NavLink[] = [
   },
   {
     id: "experience",
-    title: "Experience",
+    title: "Work",
   },
   {
     id: "contact",
@@ -30,8 +30,10 @@ import {
   nodejs,
   mongodb,
   threejs,
-  creator,
+  // creator,
   github,
+  django,
+  drf,
 } from "../assets/tech";
 
 
@@ -101,59 +103,63 @@ const technologies = [
   },
 ];
 
-const experiences = [
+export const experiences: Experience[] = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: html,
+    title: "Web Development",
+    icon: reactjs,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built responsive, production-ready user interfaces using React, TypeScript, and Tailwind CSS.",
+      "Translated UI designs and wireframes into reusable, maintainable React components.",
+      "Implemented modern UI patterns using shadcn/ui and Aceternity UI.",
+      "Integrated frontend applications with REST APIs and authentication services.",
+      "Added animations and interactive elements using Framer Motion and GSAP.",
+      "Ensured responsive layouts and consistent UI behaviour accross devices ans screen sizes.",
+      "Focused on clean component structure, perfomance, and reusability.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: css,
+    title: "Backend Development",
+    icon: django,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed server-side logic using Python, Django, and Django REST Framework.",
+      "Implemented authentication and authorization systems using Clerk, Supabase and Appwrite.",
+      "Built and maintained backend services supporting web applications.",
+      "Worked with relational databases including PostgreSQL and SQLite.",
+      "Implemented real-time features using WebSockets (Daphne).",
+      "Integrated multiple payment gateways including Stripe, Paystack, Flutterwave, and PayPal.",
+      "Monitored backend and Frontend system errors using Sentry.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: github,
+    title: "Full-Stack Development",
+    icon: mobile,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built complete web applications combining React frontends with Django-based backends.",
+      "Delivered end-to-end features including UI, APIs, databases, authentication, and payments.",
+      "Developed Saas platforms, e-commerce systems, booking platforms, an real-time applications.",
+      "Deployed applications using Render, GitHub Pages, and cloud-hosted PostgreSQL.",
+      "Worked independently in fully remote environments, managing features from development to production.",
+      "Focused on scalability, maintainability, and clean application architecture."
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: creator,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "API Development",
+  //   icon: drf,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
@@ -249,4 +255,4 @@ const projects = [
   },
 ];
 
-export { technologies, experiences, testimonials, projects };
+export { technologies, testimonials, projects };

@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="flex gap-1">
             {navLinks.map((nav) => (
               <a
-                className="nav-hover-btn lg:ms-6 xl:ms-6 md:ms-4 ms-1"
+                className="nav-hover-btn lg:ms-6 xl:ms-6 md:ms-4"
                 key={nav.id}
                 href={`#${nav.id}`}
               >

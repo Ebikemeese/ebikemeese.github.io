@@ -9,7 +9,8 @@ const ServiceCard = ({ index, title, icon }: any) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [ref, inView] = useInView({
         triggerOnce: false,
-        threshold: 0.3,
+        threshold: 0,
+        rootMargin: "100px 0px",
     });
 
     const [scrollDir, setScrollDir] = useState<"up" | "down">("down");
@@ -35,7 +36,7 @@ const ServiceCard = ({ index, title, icon }: any) => {
         if (inView && cardRef.current && scrollDir === "down") {
         gsap.fromTo(
             cardRef.current,
-            { x: 100, opacity: 0 }, // slide up from bottom
+            { x: -150, opacity: 0 }, // slide up from bottom
             {
             x: 0,
             opacity: 1,
@@ -72,8 +73,8 @@ const About = () => {
     const headingRef = useRef<HTMLDivElement>(null);
     const paraRef = useRef<HTMLParagraphElement>(null);
 
-    const [headingInViewRef, headingInView] = useInView({ triggerOnce: false, threshold: 0.3 });
-    const [paraInViewRef, paraInView] = useInView({ triggerOnce: false, threshold: 0.3 });
+    const [headingInViewRef, headingInView] = useInView({ triggerOnce: false, threshold: 0, rootMargin: "100px 0px", });
+    const [paraInViewRef, paraInView] = useInView({ triggerOnce: false, threshold: 0, rootMargin: "100px 0px", });
 
     const [scrollDir, setScrollDir] = useState<"up" | "down">("down");
 
@@ -100,7 +101,7 @@ const About = () => {
         if (headingInView && headingRef.current && scrollDir === "down") {
         gsap.fromTo(
             headingRef.current,
-            { y: 100, opacity: 0 },
+            { y: 150, opacity: 0 },
             { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
         );
         }
@@ -111,15 +112,15 @@ const About = () => {
         if (paraInView && paraRef.current && scrollDir === "down") {
         gsap.fromTo(
             paraRef.current,
-            { y: 100, opacity: 0 },
+            { y: 150, opacity: 0 },
             { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.2 }
         );
         }
     }, [paraInView, scrollDir]);
 
     return (
-            <>
-                <div className="bg-[#252838] px-4 py-4">
+            <div id="about" className="bg-[#252838] px-4 py-20">
+                <div className="w-full max-w-7xl mx-auto">
                 
                     <div ref={headingInViewRef}>
                         <div ref={headingRef}>
@@ -150,7 +151,7 @@ const About = () => {
                         ))}
                     </div>
                 </div>
-            </>
+            </div>
         );
     };
 

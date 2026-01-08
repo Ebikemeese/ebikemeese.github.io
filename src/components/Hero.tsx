@@ -3,7 +3,7 @@ import '../assets/css/slider-rotate.css'
 
 const Hero = () => {
     return (
-        <main className="relative">
+        <main className="relative w-full max-w-7xl mx-auto">
             <div className="banner">
                 {/* Rotating slider */}
                 <div className="slider" style={{ ["--quantity" as any]: 16 }}>
@@ -17,7 +17,7 @@ const Hero = () => {
                 {/* Content section */}
                 <div className="content">
                     <h1 data-content="DEVELOPER" className="bottom-50">DEVELOPER</h1>
-                    <div className="author xl:left-7 lg:left-6 md:left-7 left-[50%]">
+                    <div className="author xl:left-7 lg:left-6 md:left-7 left-[50%] mb-5">
                         <h2>Ebikeme Ese</h2>
                         <p>
                             <b>Full-Stack Developer Based in Nigeria</b>

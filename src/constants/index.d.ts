@@ -16,7 +16,7 @@ export interface Technology {
 
 export interface Experience {
   title: string;
-  company_name: string;
+  // company_name: string;
   icon: string;
   iconBg: string;
   date: string;

@@ -56,6 +56,10 @@
 @theme {
   --color-zinc-350: #b8b8c4;
   --color-tertiary: #151030;
+  --color-secondary: #aaa6c3;
+  --color-white: #FFFFFF;
+  --color-white-100: #f3f3f3;
+
 
   --font-generalsans: 'General Sans', sans-serif;
 

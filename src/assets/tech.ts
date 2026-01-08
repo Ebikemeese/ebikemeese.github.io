@@ -14,6 +14,8 @@ import mongodb from "./tech/mongodb.png";
 import github from "./tech/git.png";
 import threejs from "./tech/threejs.svg";
 import creator from "./tech/creator.png";
+import django from "./tech/django.png";
+import drf from "./tech/drf1.jpg"
 
 export {
   mobile,
@@ -31,4 +33,6 @@ export {
   threejs,
   creator,
   github,
+  django,
+  drf,
 };

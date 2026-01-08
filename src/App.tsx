@@ -6,6 +6,7 @@ import Loader from "./components/Loader";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import About from "./components/About";
+import Experience from "./components/Experience";
 
 function App() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -23,12 +24,14 @@ function App() {
 
   return (
     <Router>
-      <Loader />
-      <div ref={pageRef} style={{ opacity: 0 }}>
-        <Navbar />
-        <Hero />
-      </div>
-      <About />
+        <Loader />
+        <div ref={pageRef} style={{ opacity: 0 }}>
+          <Navbar />
+          <Hero />
+          <About />
+          <Experience />
+        </div>
+        
     </Router>
   );
 }
