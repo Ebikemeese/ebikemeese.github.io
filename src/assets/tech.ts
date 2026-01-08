@@ -16,6 +16,14 @@ import threejs from "./tech/threejs.svg";
 import creator from "./tech/creator.png";
 import django from "./tech/django.png";
 import drf from "./tech/drf1.jpg"
+import appwrite from "./tech/appwrite.jpg";
+import boostrap from "./tech/bootstrap.png";
+import clerk from "./tech/clerk.png";
+import gsap from "./tech/gsap.webp";
+import jquery from "./tech/jquery.webp";
+import postgresql from "./tech/postgresql.png";
+import sentry from "./tech/sentry.webp";
+import supabase from "./tech/supabase.webp";
 
 export {
   mobile,
@@ -35,4 +43,34 @@ export {
   github,
   django,
   drf,
+  appwrite,
+  boostrap,
+  clerk,
+  gsap,
+  jquery,
+  postgresql,
+  sentry,
+  supabase
 };
+
+import greatkart from "./projects/greatkart.png";
+import blogify from "./projects/blogify.png";
+import brainwave from "./projects/brainwave.png";
+import converso from "./projects/converso.png"
+import djangobnb from "./projects/djangobnb.png";
+import iphone from "./projects/iphone-15.png";
+import portfolio from "./projects/portfolio.png";
+import xora from "./projects/xora.png";
+import zentry from "./projects/zentry.png";
+
+export {
+greatkart,
+blogify,
+brainwave,
+converso,
+djangobnb,
+iphone,
+portfolio,
+xora,
+zentry
+}

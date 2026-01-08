@@ -42,4 +42,5 @@ export interface Project {
   tags: ProjectTag[];
   image: string;
   source_code_link: string;
+  catalog: string
 }

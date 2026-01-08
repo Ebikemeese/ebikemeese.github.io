@@ -7,6 +7,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Tech from "./components/Tech";
+import Works from "./components/Works";
+// import Testimonials from "./components/Testimonials";
 
 function App() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -30,6 +33,9 @@ function App() {
           <Hero />
           <About />
           <Experience />
+          <Tech />
+          <Works />
+          {/* <Testimonials /> */}
         </div>
         
     </Router>

@@ -25,15 +25,34 @@ import {
   html,
   css,
   reactjs,
-  redux,
+  // redux,
   tailwind,
-  nodejs,
-  mongodb,
+  // nodejs,
+  // mongodb,
   threejs,
   // creator,
   github,
   django,
   drf,
+  appwrite,
+  boostrap,
+  clerk,
+  gsap,
+  jquery,
+  postgresql,
+  sentry,
+  supabase,
+
+  //projects
+  greatkart,
+  blogify,
+  brainwave,
+  converso,
+  djangobnb,
+  iphone,
+  portfolio,
+  xora,
+  zentry
 } from "../assets/tech";
 
 
@@ -77,30 +96,70 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "Three JS",
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: github,
   },
+  {
+    name: "Django",
+    icon: django,
+  },
+  {
+    name: "Django REST Framework",
+    icon: drf,
+  },
+  {
+    name: "Appwrite",
+    icon: appwrite,
+  },
+  {
+    name: "Bootstrap",
+    icon: boostrap,
+  },
+  {
+    name: "Clerk",
+    icon: clerk,
+  },
+  {
+    name: "GSAP",
+    icon: gsap,
+  },
+  {
+    name: "jQuery",
+    icon: jquery,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "Sentry",
+    icon: sentry,
+  },
+  {
+    name: "Supabase",
+    icon: supabase,
+  }
 ];
 
 export const experiences: Experience[] = [
@@ -187,72 +246,396 @@ const testimonials = [
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
+  {
+    testimonial:
+      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+    name: "Sara Lee",
+    designation: "CFO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
+  },
+  {
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    name: "Chris Brown",
+    designation: "COO",
+    company: "DEF Corp",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
+  },
+  {
+    testimonial:
+      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Lisa Wang",
+    designation: "CTO",
+    company: "456 Enterprises",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+  },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Greatkart",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Multi-vendor e-commerce website, a complete, professional online marketplace system where multiple vendors can sell products under one platform.",
     tags: [
       {
-        name: "react",
+        name: "django",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "python",
+        color: "orange-text-gradient"
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: github,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: typescript,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "html",
         color: "green-text-gradient",
       },
       {
         name: "css",
         color: "pink-text-gradient",
       },
+      {
+        name: "bootstrap",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "jquery",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "green-text-gradient"
+      },
     ],
-    image: reactjs,
-    source_code_link: "https://github.com/",
+    image: greatkart,
+    source_code_link: "https://greatkart-ad.onrender.com",
+    catalog: "https://wa.me/p/25121177120887948/2348123208257",
   },
+  {
+    name: "Converso",
+    description:
+      "Converso LMS is an AI-driven Learning management SAAS designed to make learning interactive, personalized, and engaging.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "clerk",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "vapi ai",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: converso,
+    source_code_link: "https://ebikemeese.github.io/Saas-app",
+    catalog: "https://wa.me/p/25150245704678153/2348123208257",
+  },
+  {
+    name: "Brainwave",
+    description:
+      "Modern UI/UX. Experience a visually stunning, next-level website with bento grid layout, fluid transitions that make browsing a delight and immersive scrolling for a dynamic user experience.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: brainwave,
+    source_code_link: "https://ebikemeese.github.io/Brainwave",
+    catalog: "https://wa.me/p/25635943382668214/2348123208257",
+  },
+  {
+    name: "John Doe's Portfolio",
+    description:
+      "A portfolio website that showcase projects, skills, and creativity with a modern, interactive immersive 3D visuals and smooth animations. Best viewed on Laptop/desktop.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "three.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "framer motion",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "aceternity ui",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "typescript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://ebikemeese.github.io/John-doe-portfolio",
+    catalog: "https://wa.me/p/25459739463681260/2348123208257",
+  },
+  {
+    name: "Zentry Clone",
+    description:
+      "The metagame experience, step into the future of web gaming with this immersive, ultra-smooth Zentry clone! Built for stunning 3D visuals, fluid animations, and creative interactions.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "three.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "gsap",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "blue-text-gradient"
+      },
+    ],
+    image: zentry,
+    source_code_link: "https://ebikemeese.github.io/Award-winning",
+    catalog: "https://wa.me/p/32644800018501904/2348123208257",
+  },
+  {
+    name: "Xora",
+    description:
+      "Video editing SAAS landing page, a modern, responsive, and lightening-fast landing page built to showcase your SAAS products beautifully! Perfect for startups, SAAS tools, and creative platforms.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: xora,
+    source_code_link: "https://ebikemeese.github.io/Xora",
+    catalog: "https://wa.me/p/25331184193187764/2348123208257",
+  },
+  {
+    name: "DjangoBnb",
+    description:
+      "AirBnb clone - Experience a modern, real-time Airbnb clone built with Djano + React(Typescript)! Search, book, chat, and manage properties effortlessly - complete with WhatsApp-style chat and live status updates.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "websocket(daphne)",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "react",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "render",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+    ],
+    image: djangobnb,
+    source_code_link: "https://ebikemeese.github.io/DjangoBnb",
+    catalog: "https://wa.me/p/24072471452451490/2348123208257",
+  },
+  {
+    name: "iPhone 15 Pro Clone",
+    description:
+      "A fully interactive iPhone 15 Pro website, inspired by Apple's official product page! Experience 3D animations, smooth transitions, and immersive interactions like never before.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "three.js",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "gsap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: iphone,
+    source_code_link: "https://ebikemeese.github.io/iPhone-15-clone",
+    catalog: "https://wa.me/p/25492359273784706/2348123208257",
+  },
+  {
+    name: "Blogify",
+    description:
+      "Full-stack content management system, a modern blog platform built with React + Django + Django REST Framework. Perfect for bloggers and developers!",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "websocket(daphne)",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "render",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "postgresql",
+        color: "green-text-gradient",
+      },
+    ],
+    image: blogify,
+    source_code_link: "https://ebikemeese.github.io/React-blog-app",
+    catalog: "https://wa.me/p/25138632185779320/2348123208257",
+  },
+
 ];
 
 export { technologies, testimonials, projects };
