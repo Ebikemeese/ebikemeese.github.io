@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <a
               href={source_code_link}
               target="_blank"
-              className="bg-black text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              className="bg-black border text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <IoIosSend className="w-1/2 h-1/2 object-contain" />
             </a>
@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         {name === "Greatkart" && (
-          <p className="mt-2 text-white text-[14px]">
+          <p className="mt-2 pink-text-gradient text-[14px]">
             Note: Due to Render's free hosting plan, this website may take 30
             seconds or more to load.
           </p>
@@ -186,7 +186,7 @@ const Works = () => {
         <div className="mt-10 flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="px-6 py-2 bg-tertiary text-white rounded-lg hover:bg-blue-700 transition"
           >
             {showAll ? "View Less" : "View More"}
           </button>

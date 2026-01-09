@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import { navLinks } from "../constants/index.js";
 
 const Navbar = () => {
   return (
     <nav className="px-4 w-full flex items-center py-5 top-0 bg-transparent">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
+        <a
+          href="#hero"
           className="flex nav-hover-btn items-center gap-2 text-white group relative font-semibold font-general uppercase"
         >
           {/* Copyright symbol */}
@@ -26,7 +25,7 @@ const Navbar = () => {
               Ebikeme Ese
             </div>
           </div>
-        </Link>
+        </a>
 
         {/* Navlinks always visible */}
         <div className="flex h-full items-center font-semibold">

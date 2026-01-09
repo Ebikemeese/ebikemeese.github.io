@@ -65,6 +65,8 @@
   --color-white: #FFFFFF;
   --color-white-100: #f3f3f3;
 
+  --color-purple: #CBACF9;
+
   --color-black: #000;
   --color-black-300: #1C1C21;
   --color-black-500: #3A3A49;
@@ -193,6 +195,10 @@
 
 @layer utilities {
   @reference "tailwindcss/utilities";
+
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
 
   .nav-hover-btn {
     @apply relative font-general font-semibold uppercase text-white 

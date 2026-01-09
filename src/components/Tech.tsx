@@ -5,6 +5,8 @@ import { styles } from "@/styles";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { othertechs } from "../constants";
+import MagnetoButton from "./MagnetoButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,25 +50,45 @@ const Tech = () => {
 
     // Animate balls
     useEffect(() => {
-        gsap.utils.toArray<HTMLElement>(".ball-item").forEach((el, i) => {
+    gsap.utils.toArray<HTMLElement>(".ball-item").forEach((el, i) => {
         gsap.fromTo(
-            el,
-            { y: 100, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out",
-                delay: i * 0.1, // stagger effect
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse",
-                },
-            }
+        el,
+        { y: 100, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+            delay: i * 0.1,
+            scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+            },
+        }
         );
-        });
+    });
+
+    gsap.utils.toArray<HTMLElement>(".magneto-item").forEach((el, i) => {
+        gsap.fromTo(
+        el,
+        { y: 100, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+            delay: i * 0.1,
+            scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+            },
+        }
+        );
+    });
     }, []);
+
 
     return (
         <div id="tech" className="bg-[#252838] px-4 py-20">
@@ -86,6 +108,20 @@ const Tech = () => {
                             title={technology.name}
                         >
                         <BallCanvas icon={technology.icon} />
+                        </div>
+                    ))}
+                </div>
+
+                <div className="flex flex-row flex-wrap justify-center gap-10 mt-20">
+                    {othertechs.map((tech) => (
+                        <div
+                            className="magneto-item w-28 h-28 cursor-pointer"
+                            key={tech.name}
+                            title={tech.name}
+                        >
+                            <MagnetoButton 
+                                othertechs={tech}
+                            />
                         </div>
                     ))}
                 </div>

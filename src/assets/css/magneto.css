@@ -1,0 +1,52 @@
+#debugger {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  width: 20rem;
+}
+
+.magneto {
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* important so pseudo-element stays inside */
+}
+
+/* background overlay */
+.magneto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* start hidden to the left */
+  width: 100%;
+  height: 100%;
+  background-color: #4f46e5; /* your hover color */
+  transition: left 0.4s ease;
+  z-index: 0; /* behind content */
+  border-radius: 50%;
+}
+
+.magneto:hover::before {
+  left: 0; /* slide in */
+}
+
+/* ensure icon stays above background */
+.magneto img {
+  position: relative;
+  z-index: 1;
+  width: 4rem;
+  height: 4rem;
+}
+

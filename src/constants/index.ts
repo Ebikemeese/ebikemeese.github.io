@@ -117,12 +117,15 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "Git",
-    icon: github,
-  },
-  {
     name: "Django",
     icon: django,
+  },
+];
+
+export const othertechs = [
+  {
+    name: "Git",
+    icon: github,
   },
   {
     name: "Django REST Framework",
@@ -160,7 +163,7 @@ const technologies = [
     name: "Supabase",
     icon: supabase,
   }
-];
+]
 
 export const experiences: Experience[] = [
   {
