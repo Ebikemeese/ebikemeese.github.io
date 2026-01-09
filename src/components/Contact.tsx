@@ -72,7 +72,7 @@ const Contact = () => {
       {/* Background grid */}
       <div className="absolute left-0 -bottom-1 w-full h-full">
         <img
-          src="/assets/images/footer-grid.svg"
+          src="src/assets/images/footer-grid.svg"
           alt="grid"
           className="w-full h-full object-cover opacity-30"
         />

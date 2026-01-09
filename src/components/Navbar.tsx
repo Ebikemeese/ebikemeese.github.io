@@ -2,7 +2,7 @@ import { navLinks } from "../constants/index.js";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center py-5 top-0 bg-transparent">
+    <nav className="px-2 w-full flex items-center py-5 top-0 bg-transparent">
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <a
           href="#hero"

@@ -165,7 +165,7 @@ const Experience = () => {
                 className="order-1 lg:order-2 lg:my-auto flex items-center justify-center lg:h-[900px]"
                 >
                 <img
-                    src="/assets/images/full.png"
+                    src="src/assets/images/full.png"
                     alt="experience"
                     className="object-cover h-full"
                 />
