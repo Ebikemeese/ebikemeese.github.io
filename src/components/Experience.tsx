@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import type { Experience as ExperienceType } from "../constants/index.d";
+import { fullimg } from "@/assets/tech";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -165,7 +166,7 @@ const Experience = () => {
                 className="order-1 lg:order-2 lg:my-auto flex items-center justify-center lg:h-[900px]"
                 >
                 <img
-                    src="src/assets/images/full.png"
+                    src={fullimg}
                     alt="experience"
                     className="object-cover h-full"
                 />

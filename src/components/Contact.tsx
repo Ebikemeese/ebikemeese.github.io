@@ -2,6 +2,7 @@ import { styles } from "@/styles";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { footergrid } from "@/assets/tech";
 gsap.registerPlugin(ScrollTrigger)
 
 const Contact = () => {
@@ -72,7 +73,7 @@ const Contact = () => {
       {/* Background grid */}
       <div className="absolute left-0 -bottom-1 w-full h-full">
         <img
-          src="src/assets/images/footer-grid.svg"
+          src={footergrid}
           alt="grid"
           className="w-full h-full object-cover opacity-30"
         />

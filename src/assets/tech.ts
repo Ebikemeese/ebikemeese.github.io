@@ -74,3 +74,11 @@ portfolio,
 xora,
 zentry
 }
+
+import fullimg from "./images/full.png";
+import footergrid from "./images/footer-grid.svg"
+
+export {
+  fullimg,
+  footergrid
+}
