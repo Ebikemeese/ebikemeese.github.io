@@ -10,6 +10,7 @@ const Contact = () => {
   const subTextRef = useRef<HTMLParagraphElement>(null);
   const headTextRef = useRef<HTMLHeadingElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
       if (subTextRef.current) {
@@ -185,6 +186,11 @@ const Contact = () => {
             </li>
           </ul>
         </div>
+
+        <footer className="absolute bottom-4 w-full text-center text-sm text-gray-400">
+          © {currentYear} Ebikeme Ese. All Rights Reserved.
+        </footer>
+
       </div>
     </div>
   );
