@@ -50,14 +50,12 @@ function App() {
         <div className="sticky top-0 left-0 w-full z-50 bg-[#252838] shadow-md">
           <Navbar />
         </div>
-        <div className="pt-20">
-          <Hero />
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          <Contact />
-        </div>
+        <Hero />
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Contact />
       </div>
     </Router>
   );
