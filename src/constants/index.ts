@@ -52,7 +52,8 @@ import {
   iphone,
   portfolio,
   xora,
-  zentry
+  zentry,
+  horizon
 } from "../assets/tech";
 
 
@@ -372,6 +373,62 @@ const projects = [
     source_code_link: "https://ebikemeese.github.io/Saas-app",
     catalog: "https://wa.me/p/25150245704678153/2348123208257",
   },
+
+  {
+    name: "Horizon",
+    description:
+      "Horizon is a modern banking platform that allows users to link their existing Nigerian bank accounts into one unified dashboard. The app provides a seamless way to view balances, track transactions, and manage multiple accounts from different banks in one place.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "djangorestframework",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "appwrite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "shadcn/ui",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: horizon,
+    source_code_link: "https://ebikemeese.github.io/Horizon",
+    catalog: "https://wa.me/p/25150245704678153/2348123208257",
+  },
+  
   {
     name: "Brainwave",
     description:

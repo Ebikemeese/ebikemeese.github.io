@@ -62,6 +62,7 @@ import iphone from "./projects/iphone-15.png";
 import portfolio from "./projects/portfolio.png";
 import xora from "./projects/xora.png";
 import zentry from "./projects/zentry.png";
+import horizon from "./projects/horizon.png"
 
 export {
 greatkart,
@@ -72,7 +73,8 @@ djangobnb,
 iphone,
 portfolio,
 xora,
-zentry
+zentry,
+horizon
 }
 
 import fullimg from "./images/full.png";
