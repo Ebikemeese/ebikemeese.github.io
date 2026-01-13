@@ -377,7 +377,7 @@ const projects = [
   {
     name: "Horizon",
     description:
-      "Horizon is a modern banking platform that allows users to link their existing Nigerian bank accounts into one unified dashboard. The app provides a seamless way to view balances, track transactions, and manage multiple accounts from different banks in one place.",
+      "Horizon is a modern banking platform that allows users to link their existing Nigerian bank accounts into one unified dashboard.",
     tags: [
       {
         name: "django",
@@ -426,7 +426,7 @@ const projects = [
     ],
     image: horizon,
     source_code_link: "https://ebikemeese.github.io/Horizon",
-    catalog: "https://wa.me/p/25150245704678153/2348123208257",
+    catalog: "https://wa.me/p/25912344181722250/2348123208257",
   },
   
   {
