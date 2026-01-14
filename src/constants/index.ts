@@ -205,7 +205,7 @@ export const experiences: Experience[] = [
     points: [
       "Built complete web applications combining React frontends with Django-based backends.",
       "Delivered end-to-end features including UI, APIs, databases, authentication, and payments.",
-      "Developed Saas platforms, e-commerce systems, booking platforms, an real-time applications.",
+      "Developed Bank apps, Saas platforms, e-commerce systems, booking platforms, and real-time applications.",
       "Deployed applications using Render, GitHub Pages, and cloud-hosted PostgreSQL.",
       "Worked independently in fully remote environments, managing features from development to production.",
       "Focused on scalability, maintainability, and clean application architecture."
@@ -277,6 +277,60 @@ const testimonials = [
 ];
 
 const projects = [
+    {
+    name: "Horizon",
+    description:
+      "Horizon is a modern banking platform that allows users to link their existing Nigerian bank accounts into one unified dashboard.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "djangorestframework",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "appwrite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "shadcn/ui",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+    ],
+    image: horizon,
+    source_code_link: "https://ebikemeese.github.io/Horizon",
+    catalog: "https://wa.me/p/25912344181722250/2348123208257",
+  },
   {
     name: "Greatkart",
     description:
@@ -373,62 +427,6 @@ const projects = [
     source_code_link: "https://ebikemeese.github.io/Saas-app",
     catalog: "https://wa.me/p/25150245704678153/2348123208257",
   },
-
-  {
-    name: "Horizon",
-    description:
-      "Horizon is a modern banking platform that allows users to link their existing Nigerian bank accounts into one unified dashboard.",
-    tags: [
-      {
-        name: "django",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "python",
-        color: "orange-text-gradient"
-      },
-      {
-        name: "djangorestframework",
-        color: "blue-text-gradient"
-      },
-      {
-        name: "appwrite",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind css",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "shadcn/ui",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "react",
-        color: "blue-text-gradient"
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "sentry",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "vite",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "green-text-gradient",
-      },
-    ],
-    image: horizon,
-    source_code_link: "https://ebikemeese.github.io/Horizon",
-    catalog: "https://wa.me/p/25912344181722250/2348123208257",
-  },
-  
   {
     name: "Brainwave",
     description:
