@@ -24,6 +24,7 @@ import jquery from "./tech/jquery.webp";
 import postgresql from "./tech/postgresql.png";
 import sentry from "./tech/sentry.webp";
 import supabase from "./tech/supabase.webp";
+import express from "./tech/express.webp"
 
 export {
   mobile,
@@ -50,7 +51,8 @@ export {
   jquery,
   postgresql,
   sentry,
-  supabase
+  supabase,
+  express
 };
 
 import greatkart from "./projects/greatkart.png";
@@ -62,7 +64,8 @@ import iphone from "./projects/iphone-15.png";
 import portfolio from "./projects/portfolio.png";
 import xora from "./projects/xora.png";
 import zentry from "./projects/zentry.png";
-import horizon from "./projects/horizon.png"
+import horizon from "./projects/horizon.png";
+import streamify from "./projects/streamify.png";
 
 export {
 greatkart,
@@ -74,7 +77,8 @@ iphone,
 portfolio,
 xora,
 zentry,
-horizon
+horizon,
+streamify
 }
 
 import fullimg from "./images/full.png";

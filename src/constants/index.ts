@@ -27,8 +27,8 @@ import {
   reactjs,
   // redux,
   tailwind,
-  // nodejs,
-  // mongodb,
+  nodejs,
+  mongodb,
   threejs,
   // creator,
   github,
@@ -53,7 +53,9 @@ import {
   portfolio,
   xora,
   zentry,
-  horizon
+  horizon,
+  streamify,
+  express
 } from "../assets/tech";
 
 
@@ -105,14 +107,6 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  // {
-  //   name: "Node JS",
-  //   icon: nodejs,
-  // },
-  // {
-  //   name: "MongoDB",
-  //   icon: mongodb,
-  // },
   {
     name: "Three JS",
     icon: threejs,
@@ -124,6 +118,18 @@ const technologies = [
 ];
 
 export const othertechs = [
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "Express JS",
+    icon: express,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
   {
     name: "Git",
     icon: github,
@@ -427,6 +433,59 @@ const projects = [
     source_code_link: "https://ebikemeese.github.io/Saas-app",
     catalog: "https://wa.me/p/25150245704678153/2348123208257",
   },
+
+  {
+    name: "Streamify",
+    description:
+      "A real-time social blog app and community app, designed to support interactive communities, content sharing, and live conversations in one seamless experience.",
+    tags: [
+      {
+        name: "mongodb",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "expressjs",
+        color: "orange-text-gradient"
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "daisyui",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "stream",
+        color: "pink-text-gradient"
+      }
+    ],
+    image: streamify,
+    source_code_link: "https://ebikemeese.github.io/Streamify",
+    catalog: "https://wa.me/p/25958942870409699/2348123208257",
+  },
+
+
   {
     name: "Brainwave",
     description:
