@@ -194,7 +194,7 @@ export const experiences: Experience[] = [
     iconBg: "#E6DEDD",
     date: "2024 - Present",
     points: [
-      "Developed server-side logic using Python, Django, and Django REST Framework.",
+      "Developed server-side logic using Python, Django, Django REST Framework, Node.js and Express.js.",
       "Implemented authentication and authorization systems using Clerk, Supabase and Appwrite.",
       "Built and maintained backend services supporting web applications.",
       "Worked with relational databases including PostgreSQL and SQLite.",
