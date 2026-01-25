@@ -45,6 +45,5 @@ The site focuses on performance, aesthetics, and interactivity.
 ### Tooling & Deployment
 - **ESLint**
 - **GitHub Pages**
-- **gh-pages**
 
 ---
