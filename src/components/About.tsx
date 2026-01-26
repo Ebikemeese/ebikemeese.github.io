@@ -110,7 +110,7 @@ const About = () => {
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           I'm a skilled full-stack developer with experience in Python, TypeScript and
-          JavaScript, and expertise in frameworks like React.js, Django, Django REST Framework, and Three.js..
+          JavaScript, and expertise in frameworks like React.js, Django, Django REST Framework, Node.js, Express.js and Three.js.
           I work confidently with tools such as TailwindCSS, Bootstrap, GSAP, 
           and jQuery to craft engaging interfaces, while leveraging PostgreSQL, 
           Supabase, Clerk, and Appwrite for robust backend solutions. 
