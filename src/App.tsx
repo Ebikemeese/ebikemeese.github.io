@@ -10,15 +10,15 @@ import Tech from "./components/Tech";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import { ReactLenis } from "lenis/react";
-import type { LenisRef } from "lenis/react"; // 👈 correct type
+import type { LenisRef } from "lenis/react"; 
 
 function App() {
   const pageRef = useRef<HTMLDivElement>(null);
-  const lenisRef = useRef<LenisRef | null>(null); // 👈 use LenisRef
+  const lenisRef = useRef<LenisRef | null>(null); 
 
   useEffect(() => {
     function update(time: number) {
-      lenisRef.current?.lenis?.raf(time * 1000); // 👈 safe access
+      lenisRef.current?.lenis?.raf(time * 1000); 
     }
 
     gsap.ticker.add(update);
@@ -26,13 +26,15 @@ function App() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("load", () => {
+    const timer = setTimeout(() => {
       gsap.fromTo(
         pageRef.current,
         { y: "100%", opacity: 0 },
         { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" }
       );
-    });
+    }, 5000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
