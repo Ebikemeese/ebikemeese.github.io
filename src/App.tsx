@@ -32,7 +32,7 @@ function App() {
         { y: "100%", opacity: 0 },
         { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" }
       );
-    }, 5000);
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, []);
