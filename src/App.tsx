@@ -26,13 +26,15 @@ function App() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("load", () => {
+    const timer = setTimeout(() => {
       gsap.fromTo(
         pageRef.current,
         { y: "100%", opacity: 0 },
         { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" }
       );
-    });
+    }, 5000); // match loader delay
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
