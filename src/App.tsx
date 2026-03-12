@@ -26,15 +26,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    window.addEventListener("load", () => {
       gsap.fromTo(
         pageRef.current,
         { y: "100%", opacity: 0 },
         { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" }
       );
-    }, 8000);
-
-    return () => clearTimeout(timer);
+    });
   }, []);
 
   return (
