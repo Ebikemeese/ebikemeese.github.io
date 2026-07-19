@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
 import { IoIosSend } from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
@@ -24,6 +23,29 @@ interface ProjectCardProps {
   catalog: string;
 }
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.9 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      delay: i * 0.1,
+      ease: [0.25, 1, 0.5, 1] as const,
+    },
+  }),
+  exit: {
+    opacity: 0,
+    y: 30,
+    scale: 0.95,
+    transition: {
+      duration: 0.3,
+      ease: "easeIn" as const,
+    },
+  },
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({
   index,
   name,
@@ -35,10 +57,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <motion.div
+      layout
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      custom={index % 3}
       className="project-card"
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
-      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card hover:shadow-purple/20 transition-all duration-300">
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -50,7 +77,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <a
               href={source_code_link}
               target="_blank"
-              className="bg-black border text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              rel="noopener noreferrer"
+              className="bg-black border text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
             >
               <IoIosSend className="w-1/2 h-1/2 object-contain" />
             </a>
@@ -60,8 +88,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
-          <p className="text-secondary text-[14px]">
-            <a href={catalog} target="_blank" className="text-white underline">
+          <p className="text-secondary text-[14px] mt-1">
+            <a href={catalog} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-purple transition-colors">
               Read more on my WhatsApp catalog.
             </a>
           </p>
@@ -89,7 +117,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const Works = () => {
   const subTextRef = useRef<HTMLParagraphElement>(null);
   const headTextRef = useRef<HTMLHeadingElement>(null);
-  const projectCardRef = useRef<HTMLDivElement>(null);
 
   // 👇 state to control how many projects are shown
   const [showAll, setShowAll] = useState(false);
@@ -131,68 +158,46 @@ const Works = () => {
         }
       );
     }
-
-    if (projectCardRef.current) {
-      gsap.utils.toArray<HTMLElement>(".project-card").forEach((el, i) => {
-        gsap.fromTo(
-          el,
-          { y: 100, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            delay: i * 0.1,
-            stagger: 0.2,
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      });
-    }
   }, []);
 
-  // 👇 decide which projects to show
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <>
-      <div
-        className="px-4 overflow-y-hidden py-20 w-full max-w-7xl mx-auto overflow-x-hidden"
-        id="projects"
-      >
-        <motion.div variants={textVariant()} className="text-center">
-          <p ref={subTextRef} className={styles.sectionSubText}>
-            My work
-          </p>
-          <h2 ref={headTextRef} className={styles.sectionHeadText}>
-            Projects.
-          </h2>
-        </motion.div>
-
-        <div
-          ref={projectCardRef}
-          className="mt-20 flex flex-wrap gap-7 items-center justify-center"
-        >
-          {visibleProjects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
-          ))}
-        </div>
-
-        {/* 👇 View More / View Less button */}
-        <div className="mt-10 flex justify-center">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 bg-tertiary text-white rounded-lg hover:bg-blue-700 transition"
-          >
-            {showAll ? "View Less" : "View More"}
-          </button>
-        </div>
+    <div
+      className="px-4 py-20 w-full max-w-7xl mx-auto overflow-x-hidden"
+      id="projects"
+    >
+      <div className="text-center">
+        <p ref={subTextRef} className={styles.sectionSubText}>
+          My work
+        </p>
+        <h2 ref={headTextRef} className={styles.sectionHeadText}>
+          Projects.
+        </h2>
       </div>
-    </>
+
+      {/* Animated Projects Grid with Layout transitions */}
+      <motion.div
+        layout
+        className="mt-20 flex flex-wrap gap-7 items-center justify-center min-h-[400px]"
+      >
+        <AnimatePresence mode="popLayout">
+          {visibleProjects.map((project, index) => (
+            <ProjectCard key={project.name} index={index} {...project} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* 👇 View More / View Less button */}
+      <div className="mt-10 flex justify-center">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="px-6 py-2 bg-tertiary text-white rounded-lg hover:bg-blue-700 transition"
+        >
+          {showAll ? "View Less" : "View More"}
+        </button>
+      </div>
+    </div>
   );
 };
 

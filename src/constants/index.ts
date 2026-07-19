@@ -3,12 +3,28 @@ import type { Service, NavLink, Experience } from "./index.d"
 
 export const navLinks: NavLink[] = [
   {
+    id: "hero",
+    title: "Home",
+  },
+  {
     id: "about",
-    title: "About",
+    title: "About Me",
+  },
+  {
+    id: "tech",
+    title: "Tech Stack",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "github-stats",
+    title: "GitHub & Activity",
   },
   {
     id: "experience",
-    title: "Work",
+    title: "Work Experience",
   },
   {
     id: "contact",
@@ -25,23 +41,14 @@ import {
   html,
   css,
   reactjs,
-  // redux,
   tailwind,
   nodejs,
   mongodb,
   threejs,
-  // creator,
   github,
   django,
-  drf,
-  appwrite,
-  boostrap,
   clerk,
   gsap,
-  jquery,
-  postgresql,
-  sentry,
-  supabase,
 
   //projects
   greatkart,
@@ -55,7 +62,8 @@ import {
   zentry,
   horizon,
   streamify,
-  express
+  reactNativePhone,
+  vapi
 } from "../assets/tech";
 
 
@@ -78,7 +86,7 @@ export const services: Service[] = [
   },
 ];
 
-const technologies = [
+export const technologies = [
   {
     name: "HTML 5",
     icon: html,
@@ -99,10 +107,6 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  // {
-  //   name: "Redux Toolkit",
-  //   icon: redux,
-  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -119,32 +123,40 @@ const technologies = [
 
 export const othertechs = [
   {
+    name: "Vite",
+    icon: "https://api.iconify.design/logos:vitejs.svg",
+  },
+  {
+    name: "Socket.io",
+    icon: "https://api.iconify.design/simple-icons:socketdotio.svg?color=%23ffffff",
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
   {
     name: "Express JS",
-    icon: express,
+    icon: "https://api.iconify.design/simple-icons:express.svg?color=%23ffffff",
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Git",
+    name: "Git & GitHub",
     icon: github,
   },
   {
     name: "Django REST Framework",
-    icon: drf,
+    icon: "https://api.iconify.design/simple-icons:django.svg?color=%23ffffff",
   },
   {
     name: "Appwrite",
-    icon: appwrite,
+    icon: "https://api.iconify.design/logos:appwrite-icon.svg",
   },
   {
     name: "Bootstrap",
-    icon: boostrap,
+    icon: "https://api.iconify.design/logos:bootstrap.svg",
   },
   {
     name: "Clerk",
@@ -156,21 +168,121 @@ export const othertechs = [
   },
   {
     name: "jQuery",
-    icon: jquery,
+    icon: "https://api.iconify.design/logos:jquery-icon.svg",
   },
   {
     name: "PostgreSQL",
-    icon: postgresql,
+    icon: "https://api.iconify.design/logos:postgresql.svg",
   },
   {
     name: "Sentry",
-    icon: sentry,
+    icon: "https://api.iconify.design/logos:sentry-icon.svg",
   },
   {
     name: "Supabase",
-    icon: supabase,
-  }
-]
+    icon: "https://api.iconify.design/logos:supabase-icon.svg",
+  },
+  {
+    name: "Python",
+    icon: "https://api.iconify.design/logos:python.svg",
+  },
+  {
+    name: "React Native",
+    icon: reactNativePhone,
+  },
+  {
+    name: "Expo",
+    icon: "https://api.iconify.design/simple-icons:expo.svg?color=%23ffffff",
+  },
+  {
+    name: "Shadcn/UI",
+    icon: "https://api.iconify.design/simple-icons:shadcnui.svg?color=%23ffffff",
+  },
+  {
+    name: "Refine",
+    icon: "https://api.iconify.design/logos:refine.svg",
+  },
+  {
+    name: "DaisyUI",
+    icon: "https://api.iconify.design/simple-icons:daisyui.svg?color=%235A0EF0",
+  },
+  {
+    name: "Aceternity UI",
+    icon: "https://api.iconify.design/simple-icons:framer.svg?color=%23ffffff",
+  },
+  {
+    name: "Lenis",
+    icon: "https://api.iconify.design/simple-icons:npm.svg?color=%23cbacf9",
+  },
+  {
+    name: "Framer Motion",
+    icon: "https://api.iconify.design/simple-icons:framer.svg?color=%23ffffff",
+  },
+  {
+    name: "NativeWind",
+    icon: "https://api.iconify.design/logos:tailwindcss-icon.svg",
+  },
+  {
+    name: "Fastify",
+    icon: "https://api.iconify.design/simple-icons:fastify.svg?color=%23ffffff",
+  },
+  {
+    name: "WebRTC",
+    icon: "https://api.iconify.design/logos:webrtc.svg",
+  },
+  {
+    name: "WebSockets (Daphne)",
+    icon: "https://api.iconify.design/logos:django.svg",
+  },
+  {
+    name: "Vapi AI",
+    icon: vapi,
+  },
+  {
+    name: "Elasticsearch",
+    icon: "https://api.iconify.design/logos:elasticsearch.svg",
+  },
+  {
+    name: "SQLite",
+    icon: "https://api.iconify.design/logos:sqlite.svg",
+  },
+  {
+    name: "Prisma",
+    icon: "https://api.iconify.design/simple-icons:prisma.svg?color=%23ffffff",
+  },
+  {
+    name: "Redis",
+    icon: "https://api.iconify.design/logos:redis.svg",
+  },
+  {
+    name: "NeonDB",
+    icon: "https://api.iconify.design/logos:neon.svg",
+  },
+  {
+    name: "Drizzle",
+    icon: "https://api.iconify.design/simple-icons:drizzle.svg?color=%23C5F74F",
+  },
+  {
+    name: "Better-Auth",
+    icon: "https://api.iconify.design/simple-icons:auth0.svg?color=%23ffffff",
+  },
+  {
+    name: "Docker",
+    icon: "https://api.iconify.design/logos:docker-icon.svg",
+  },
+  {
+    name: "CodeRabbit",
+    icon: "https://api.iconify.design/simple-icons:coderabbit.svg?color=%23ffffff",
+  },
+  {
+    name: "Cloudinary",
+    icon: "https://api.iconify.design/logos:cloudinary-icon.svg",
+  },
+  {
+    name: "Celery",
+    icon: "https://api.iconify.design/simple-icons:celery.svg?color=%2337814D",
+  },
+];
 
 export const experiences: Experience[] = [
   {
@@ -755,4 +867,4 @@ const projects = [
 
 ];
 
-export { technologies, testimonials, projects };
+export { testimonials, projects };

@@ -9,6 +9,8 @@ import Experience from "./components/Experience";
 import Tech from "./components/Tech";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
+import CustomCursor from "./components/CustomCursor";
+import GithubStats from "./components/GithubStats";
 import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react"; 
 
@@ -27,11 +29,13 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      gsap.fromTo(
-        pageRef.current,
-        { y: "100%", opacity: 0 },
-        { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" }
-      );
+      if (pageRef.current) {
+        gsap.fromTo(
+          pageRef.current,
+          { y: "100%", opacity: 0 },
+          { y: "0%", opacity: 1, duration: 1.2, ease: "power3.out" }
+        );
+      }
     }, 5000); // match loader delay
 
     return () => clearTimeout(timer);
@@ -39,6 +43,7 @@ function App() {
 
   return (
     <Router basename="/">
+      <CustomCursor />
       <Loader />
       <div ref={pageRef} style={{ opacity: 0 }}>
         <ReactLenis 
@@ -57,6 +62,7 @@ function App() {
         <Experience />
         <Tech />
         <Works />
+        <GithubStats />
         <Contact />
       </div>
     </Router>

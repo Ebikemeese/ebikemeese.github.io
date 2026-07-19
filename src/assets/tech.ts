@@ -24,7 +24,9 @@ import jquery from "./tech/jquery.webp";
 import postgresql from "./tech/postgresql.png";
 import sentry from "./tech/sentry.webp";
 import supabase from "./tech/supabase.webp";
-import express from "./tech/express.webp"
+import express from "./tech/express.webp";
+import reactNativePhone from "./tech/react-native.png";
+import vapi from "./tech/vapi.png";
 
 export {
   mobile,
@@ -52,7 +54,9 @@ export {
   postgresql,
   sentry,
   supabase,
-  express
+  express,
+  reactNativePhone,
+  vapi
 };
 
 import greatkart from "./projects/greatkart.png";
