@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "../constants/index.js";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaGithub, FaEnvelope } from "react-icons/fa";
+import { Scissors } from "lucide-react";
 
 const backdropVariants = {
   hidden: { opacity: 0 },
@@ -45,6 +46,31 @@ const linkVariants = {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [shortcutLabel, setShortcutLabel] = useState("Ctrl+B");
+
+  useEffect(() => {
+    if (
+      typeof navigator !== "undefined" &&
+      /Mac|iPod|iPhone|iPad/.test(navigator.userAgent)
+    ) {
+      setShortcutLabel("⌘B");
+    }
+  }, []);
+
+  // Toggle drawer with Ctrl+B (Windows/Linux) or Cmd+B (macOS/iOS), close on Escape
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "b") {
+        e.preventDefault();
+        setIsOpen((prev) => !prev);
+      } else if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,15 +150,25 @@ const Navbar = () => {
             </div>
           </a>
 
-          {/* Right Hamburger Menu Button - Exact w-[20px] Icon Width */}
-          <button
-            onClick={toggleMenu}
-            className="w-[20px] h-[20px] p-0 m-0 leading-none text-white hover:text-purple hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer bg-transparent border-none outline-none focus:outline-none flex items-center justify-center"
-            aria-label="Toggle Navigation Menu"
-            data-cursor="pointer"
-          >
-            <HiMenuAlt3 className="w-[20px] h-[20px] text-white hover:text-purple transition-colors p-0 m-0 block" />
-          </button>
+          {/* Right Hamburger Menu Button with Shortcut Hint */}
+          <div className="flex items-center gap-3">
+            <span
+              className="inline-flex items-center justify-center py-0.5 text-[10px] font-mono font-medium text-purple-300 bg-purple/15 border border-purple/30 rounded max-w-[50px]"
+              title={`Press ${shortcutLabel} to toggle navigation menu`}
+            >
+              <Scissors className="w-3 h-3 text-purple" />
+              <span className="font-semibold text-gray-200 mr-3">B</span>
+            </span>
+            <button
+              onClick={toggleMenu}
+              className="w-[20px] h-[20px] p-0 m-0 leading-none text-white hover:text-purple hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer bg-transparent border-none outline-none focus:outline-none flex items-center justify-center"
+              aria-label={`Toggle Navigation Menu (${shortcutLabel})`}
+              title={`Toggle Navigation Menu (${shortcutLabel})`}
+              data-cursor="pointer"
+            >
+              <HiMenuAlt3 className="w-[20px] h-[20px] text-white hover:text-purple transition-colors p-0 m-0 block" />
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -168,6 +204,12 @@ const Navbar = () => {
                       <span className="w-2.5 h-2.5 rounded-full bg-purple animate-ping" />
                       <span className="text-xs uppercase tracking-widest font-bold text-purple">
                         Navigation
+                      </span>
+                      <span className="inline-flex items-center justify-center py-0.5 text-[10px] font-mono font-medium text-purple-300 bg-purple/15 border border-purple/30 rounded max-w-[50px]">
+                        <Scissors className="w-3 h-3 text-purple" />
+                        <span className="font-semibold text-purple-200 mr-3">
+                          B
+                        </span>
                       </span>
                     </div>
 
@@ -250,7 +292,7 @@ const Navbar = () => {
             </>
           )}
         </AnimatePresence>,
-        document.body
+        document.body,
       )}
     </>
   );
