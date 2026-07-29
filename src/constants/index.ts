@@ -1,5 +1,4 @@
-import type { Service, NavLink, Experience } from "./index.d"
-
+import type { Service, NavLink, Experience } from "./index.d";
 
 export const navLinks: NavLink[] = [
   {
@@ -62,10 +61,10 @@ import {
   zentry,
   horizon,
   streamify,
+  autospace,
   reactNativePhone,
-  vapi
+  vapi,
 } from "../assets/tech";
-
 
 export const services: Service[] = [
   {
@@ -326,7 +325,7 @@ export const experiences: Experience[] = [
       "Developed Bank apps, Saas platforms, e-commerce systems, booking platforms, and real-time applications.",
       "Deployed applications using Render, GitHub Pages, and cloud-hosted PostgreSQL.",
       "Worked independently in fully remote environments, managing features from development to production.",
-      "Focused on scalability, maintainability, and clean application architecture."
+      "Focused on scalability, maintainability, and clean application architecture.",
     ],
   },
   // {
@@ -395,7 +394,7 @@ const testimonials = [
 ];
 
 const projects = [
-    {
+  {
     name: "Horizon",
     description:
       "Horizon is a modern banking platform that allows users to link their existing Nigerian bank accounts into one unified dashboard.",
@@ -406,11 +405,11 @@ const projects = [
       },
       {
         name: "python",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "djangorestframework",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "appwrite",
@@ -426,7 +425,7 @@ const projects = [
       },
       {
         name: "react",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "typescript",
@@ -460,7 +459,7 @@ const projects = [
       },
       {
         name: "python",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "html",
@@ -476,7 +475,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "jquery",
@@ -488,7 +487,7 @@ const projects = [
       },
       {
         name: "sentry",
-        color: "green-text-gradient"
+        color: "green-text-gradient",
       },
     ],
     image: greatkart,
@@ -506,11 +505,11 @@ const projects = [
       },
       {
         name: "python",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "clerk",
@@ -526,7 +525,7 @@ const projects = [
       },
       {
         name: "vapi ai",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "typescript",
@@ -545,7 +544,48 @@ const projects = [
     source_code_link: "https://ebikemeese.github.io/Saas-app",
     catalog: "https://wa.me/p/25150245704678153/2348123208257",
   },
-
+  {
+    name: "Autospace",
+    description:
+      "Smart parking and garage management platform featuring multi-role portals, real-time Leaflet maps, 3D WebGL car scenes, and valet tracking workflows.",
+    tags: [
+      {
+        name: "django",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "alpinejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "leaflet",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "webgl",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: autospace,
+    source_code_link: "https://autospace-y2kw.onrender.com",
+    catalog: "https://wa.me/p/27903765239259709/2348123208257",
+  },
   {
     name: "Streamify",
     description:
@@ -557,11 +597,11 @@ const projects = [
       },
       {
         name: "expressjs",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "react",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "nodejs",
@@ -589,14 +629,13 @@ const projects = [
       },
       {
         name: "stream",
-        color: "pink-text-gradient"
-      }
+        color: "pink-text-gradient",
+      },
     ],
     image: streamify,
     source_code_link: "https://ebikemeese.github.io/Streamify",
     catalog: "https://wa.me/p/25958942870409699/2348123208257",
   },
-
 
   {
     name: "Brainwave",
@@ -643,7 +682,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "framer motion",
@@ -651,7 +690,7 @@ const projects = [
       },
       {
         name: "aceternity ui",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "typescript",
@@ -677,7 +716,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "tailwind css",
@@ -689,7 +728,7 @@ const projects = [
       },
       {
         name: "vite",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
     ],
     image: zentry,
@@ -711,7 +750,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "tailwind css",
@@ -733,7 +772,7 @@ const projects = [
       },
       {
         name: "python",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "websocket(daphne)",
@@ -753,7 +792,7 @@ const projects = [
       },
       {
         name: "vite",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "typescript",
@@ -769,7 +808,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
     ],
     image: djangobnb,
@@ -787,7 +826,7 @@ const projects = [
       },
       {
         name: "three.js",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "gsap",
@@ -799,7 +838,7 @@ const projects = [
       },
       {
         name: "vite",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "javascript",
@@ -821,7 +860,7 @@ const projects = [
       },
       {
         name: "python",
-        color: "orange-text-gradient"
+        color: "orange-text-gradient",
       },
       {
         name: "websocket(daphne)",
@@ -837,7 +876,7 @@ const projects = [
       },
       {
         name: "vite",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "typescript",
@@ -853,7 +892,7 @@ const projects = [
       },
       {
         name: "javascript",
-        color: "blue-text-gradient"
+        color: "blue-text-gradient",
       },
       {
         name: "postgresql",
@@ -864,7 +903,6 @@ const projects = [
     source_code_link: "https://ebikemeese.github.io/React-blog-app",
     catalog: "https://wa.me/p/25138632185779320/2348123208257",
   },
-
 ];
 
 export { testimonials, projects };

@@ -89,13 +89,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
           <p className="text-secondary text-[14px] mt-1">
-            <a href={catalog} target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-purple transition-colors">
+            <a
+              href={catalog}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white underline hover:text-purple transition-colors"
+            >
               Read more on my WhatsApp catalog.
             </a>
           </p>
         </div>
 
-        {name === "Greatkart" && (
+        {["Greatkart", "Autospace"].includes(name) && (
           <p className="mt-2 pink-text-gradient text-[14px]">
             Note: Due to Render's free hosting plan, this website may take 30
             seconds or more to load.
@@ -136,7 +141,7 @@ const Works = () => {
             start: "top 85%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
     }
 
@@ -155,7 +160,7 @@ const Works = () => {
             start: "top 85%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
     }
   }, []);

@@ -15,7 +15,7 @@ import github from "./tech/git.png";
 import threejs from "./tech/threejs.svg";
 import creator from "./tech/creator.png";
 import django from "./tech/django.png";
-import drf from "./tech/drf1.jpg"
+import drf from "./tech/drf1.jpg";
 import appwrite from "./tech/appwrite.jpg";
 import boostrap from "./tech/bootstrap.png";
 import clerk from "./tech/clerk.png";
@@ -56,13 +56,13 @@ export {
   supabase,
   express,
   reactNativePhone,
-  vapi
+  vapi,
 };
 
 import greatkart from "./projects/greatkart.png";
 import blogify from "./projects/blogify.png";
 import brainwave from "./projects/brainwave.png";
-import converso from "./projects/converso.png"
+import converso from "./projects/converso.png";
 import djangobnb from "./projects/djangobnb.png";
 import iphone from "./projects/iphone-15.png";
 import portfolio from "./projects/portfolio.png";
@@ -70,25 +70,24 @@ import xora from "./projects/xora.png";
 import zentry from "./projects/zentry.png";
 import horizon from "./projects/horizon.png";
 import streamify from "./projects/streamify.png";
+import autospace from "./projects/autospace.png";
 
 export {
-greatkart,
-blogify,
-brainwave,
-converso,
-djangobnb,
-iphone,
-portfolio,
-xora,
-zentry,
-horizon,
-streamify
-}
+  greatkart,
+  blogify,
+  brainwave,
+  converso,
+  djangobnb,
+  iphone,
+  portfolio,
+  xora,
+  zentry,
+  horizon,
+  streamify,
+  autospace,
+};
 
 import fullimg from "./images/full.png";
-import footergrid from "./images/footer-grid.svg"
+import footergrid from "./images/footer-grid.svg";
 
-export {
-  fullimg,
-  footergrid
-}
+export { fullimg, footergrid };
